@@ -106,12 +106,12 @@ void ScoreSorter::readFile()
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qDebug()<<"无法打开文件!";
     }
-    studData tempstu
-       QString quant(file.readLine());
-       quantity = quant.split(" ", QString::SkipEmptyParts);
+    studData tempstu；
+       QString string(file.readLine());
+       quantity = string.split(" ", QString::SkipEmptyParts);
     while(!file.atEnd()) {
-        QString str(file.readLine());
-        temptsu.stu=str.split(" ",QString::SkipEmptyParts);
+        QString st(file.readLine());
+        tempstu.stu=st.split(" ",QString::SkipEmptyParts);
         if((tempstu.stu).last() == "\n") tempstu.stu.removeLast();
         if(tempstu.stu.size()==0) continue;
         student.append(tempstu);
